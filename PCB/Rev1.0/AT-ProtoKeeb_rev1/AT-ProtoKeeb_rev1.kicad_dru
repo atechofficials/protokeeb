@@ -1,0 +1,6 @@
+(version 1)
+(rule NPTH_to_track_clearnace
+	(severity error)
+	(layer inner)
+	(condition "A.Type == A.Clearance_Override")
+	(constraint physical_hole_clearance (min 0.254mm)))

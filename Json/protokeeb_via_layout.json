@@ -1,0 +1,53 @@
+[
+  {
+    "name": "ProtoKeeb_Via_Layout",
+    "author": "A-Tech Officials",
+    "notes": "An open-source macropad/numpad/MIDI device for custom mechanical keyboard prototyping/learning.\nDesigned to be build/assembled in both Sandwitch or 3D printed case options.\nPCB is designed to support a Raspberry Pi Pico development board and it is used as the main keyboard controller.\nAlso, supports other RP2040 developement boards like Waveshare RP2040-Plus that has a similar footprint to a Raspberry Pi Pico.\nPer key south facing WS2812B ARGB LEDs.\n4x4 Switch Matrix.\nSupports 1 rotary encoder.",
+    "switchMount": "cherry",
+    "switchBrand": "outemu",
+    "switchType": "PG150R01-1",
+    "pcb": true,
+    "plate": true
+  },
+  [
+    {
+      "y": 0.3,
+      "x": 3,
+      "a": 7
+    },
+    "e0"
+  ],
+  [
+    {
+      "a": 4
+    },
+    "0,0",
+    "0,1",
+    "0,2",
+    "0,3"
+  ],
+  [
+    "1,0",
+    "1,1",
+    "1,2",
+    "1,3"
+  ],
+  [
+    "2,0",
+    "2,1",
+    "2,2",
+    "2,3"
+  ],
+  [
+    {
+      "c": "#aaaaaa"
+    },
+    "3,0",
+    {
+      "c": "#cccccc"
+    },
+    "3,1",
+    "3,2",
+    "3,3"
+  ]
+]

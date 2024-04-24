@@ -1,0 +1,14 @@
+# Ignore Protkeeb Logo Folder/Files
+Logo/
+
+# Ignore Protkeeb Rev1 Electronics Components List
+# Note: Seprate BOM files are included in the repo
+PCB/Rev1.0/AT-ProtoKeeb_rev1/ProtoKeeb_Parts.txt
+
+# Ignore Protekeeb Rev1.1 Files (Work in progress)
+PCB/Rev1.1/
+
+# Ignore Protkeeb Parts BOM Excel Sheet
+# Note: Seprate BOM files are included in the repo
+PCB/AT_Protokeeb_BOM.xlsx
+

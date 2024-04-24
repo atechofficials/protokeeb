@@ -1,0 +1,123 @@
+[
+  {
+    "backcolor": "#171717",
+    "name": "ProtoKeeb",
+    "author": "A-Tech Officials",
+    "notes": "An open-source macropad/numpad/MIDI device for custom mechanical keyboard prototyping/learning.\nDesigned to be build/assembled in both Sandwitch or 3D printed case options.\nPCB is designed to support a Raspberry Pi Pico development board and it is used as the main keyboard controller.\nAlso, supports other RP2040 developement boards like Waveshare RP2040-Plus that has a similar footprint to a Raspberry Pi Pico.\nPer key south facing WS2812B ARGB LEDs.\n4x4 Switch Matrix.\nSupports 1 rotary encoder.",
+    "switchMount": "cherry",
+    "switchBrand": "outemu",
+    "switchType": "PG150R01-1",
+    "pcb": true,
+    "plate": true
+  },
+  [
+    {
+      "y": 1.3,
+      "c": "#0075ad",
+      "t": "#ffffff",
+      "p": "DSA R1",
+      "a": 7,
+      "fa": [
+        9
+      ]
+    },
+    "<i class='fa fa-microphone-slash'></i>",
+    {
+      "c": "#009bca"
+    },
+    "<i class='fa fa-youtube-play'></i>",
+    {
+      "c": "#51c0dd",
+      "t": "#000000"
+    },
+    "<i class='fa fa-scissors'></i>",
+    {
+      "c": "#408fb3",
+      "t": "#ffffff"
+    },
+    "<i class='fa fa-save'></i>"
+  ],
+  [
+    {
+      "c": "#009bca",
+      "p": "DSA R2"
+    },
+    "<i class='fa fa-github-square'></i>",
+    {
+      "c": "#51c0dd",
+      "t": "#000000"
+    },
+    "<i class='fa fa-code'></i>",
+    {
+      "c": "#408fb3",
+      "t": "#ffffff"
+    },
+    "<i class='fa fa-android'></i>",
+    {
+      "c": "#0075ad"
+    },
+    "<i class='fa fa-video-camera'></i>"
+  ],
+  [
+    {
+      "p": "DSA R3"
+    },
+    "<i class='fa fa-gear'></i>",
+    {
+      "c": "#009bca",
+      "fa": [
+        8
+      ]
+    },
+    "<i class='fa fa-music'></i>",
+    {
+      "c": "#51c0dd",
+      "t": "#000000",
+      "fa": [
+        9
+      ]
+    },
+    "<i class='fa fa-lock'></i>",
+    {
+      "c": "#408fb3",
+      "t": "#ffffff",
+      "fa": [
+        8
+      ]
+    },
+    "<i class='fa fa-cloud-upload'></i>"
+  ],
+  [
+    {
+      "c": "#ff7921",
+      "t": "#000000",
+      "p": "DSA R4",
+      "fa": [
+        6
+      ]
+    },
+    "<i class='fa fa-power-off'></i>",
+    {
+      "c": "#51c0dd",
+      "fa": [
+        7
+      ]
+    },
+    "<i class='fa fa-wifi'></i>",
+    {
+      "c": "#009bca",
+      "t": "#ffffff",
+      "fa": [
+        9
+      ]
+    },
+    "<i class='fa fa-chrome'></i>",
+    {
+      "c": "#0075ad",
+      "fa": [
+        8
+      ]
+    },
+    "<i class='fa fa-twitch'></i>"
+  ]
+]

@@ -15,11 +15,11 @@ Designed for developers and enthusiasts who want to begin their journey in the w
 - N-Key Rollover
 - ESD/EMI Protection on-board
 - Rotary Encoder with push button.
-- USB Type-C. Not a feature any more in 2024. #NoMoreMicroUSB
-- Dedicated Bootselect and Reset Button.
+- USB Type-C port. Not a feature anymore in 2024. #NoMoreMicroUSB
+- Dedicated Bootselect and Reset Button for easy bootloader access.
 - Supports different RP2040-based development boards that have similar SMD footprint and pinout to a Raspberry Pi Pico.
-- 2MB/4MB Flash storage for all those feature-packed keyboard firmwares'.
-- Keyboard Hardware supports QMK, KMK, and ZMK firmware.
+- 2MB/4MB Flash storage for all those feature-packed keyboard firmware.
+- Protokeeb hardware supports QMK, KMK, and ZMK keyboard firmware.
 - Support for both a Sandwich Style/Layered Case or a 3D printed Case.
 
 ## Supported Dev Boards

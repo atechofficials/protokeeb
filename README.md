@@ -1,7 +1,7 @@
 <picture>
- <source media="(prefers-color-scheme: dark)" srcset="Images/protokeeb_logo/protokeeb_logo_black.png">
- <source media="(prefers-color-scheme: light)" srcset="Images/protokeeb_logo/protokeeb_logo_white.png">
- <img alt="Protokeeb Logo" src="Images/protokeeb_logo/protokeeb_logo_white.png">
+ <source media="(prefers-color-scheme: dark)" srcset="Images/protokeeb_logo/protokeeb_logo_white.png">
+ <source media="(prefers-color-scheme: light)" srcset="Images/protokeeb_logo/protokeeb_logo_black.png">
+ <img alt="Protokeeb Logo" src="Images/protokeeb_logo/protokeeb_logo_black.png">
 </picture>
 
 # Protokeeb

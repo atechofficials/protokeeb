@@ -1,6 +1,14 @@
+<picture>
+ <source media="(prefers-color-scheme: dark)" srcset="Images/protokeeb_logo/protokeeb_logo_black.png">
+ <source media="(prefers-color-scheme: light)" srcset="Images/protokeeb_logo/protokeeb_logo_white.png">
+ <img alt="Protokeeb Logo" src="Images/protokeeb_logo/protokeeb_logo_white.png">
+</picture>
+
 # Protokeeb
 
 ![Protokeeb](https://i.imgur.com/RsSBoJg.jpg)
+
+### Overview
 
 A 16-key (4 x 4) Keyboard/Numpad/Macropad/MIDI device designed by A-Tech Officials for easily getting started in the field of custom keyboards and open-source keyboard firmware.
 
@@ -28,7 +36,7 @@ Designed for developers and enthusiasts who want to begin their journey in the w
 - Raspberry Pi Pico W
 - Waveshare RP2040-Plus
 
-# Instructions/Guide
+# Getting Started
 
 There are two options to get started with Protokeeb hardware:
 
@@ -39,6 +47,7 @@ There are two options to get started with Protokeeb hardware:
 
 **Option-2** will be a DIY approach with detailed instructions for almost every step. So, that you can quickly start your custom keyboard journey filled with learning, development, and customization.
 
-**Note:** Option-2 is not recommended for a person who is an absolute beginner in the field of electronics as this option requires a certain set of skills and basic electronics knowledge, not to mention good SMD soldering skills.
+> [!Note]
+> Option-2 is not recommended for a person who is an absolute beginner in the field of electronics as this option requires a certain set of skills and basic electronics knowledge, not to mention good SMD soldering skills.
 
 Follow this guide if you are ready to test your skills: [Assembly Instructions](https://github.com/atechofficials/protokeeb) (Work-in-progress)

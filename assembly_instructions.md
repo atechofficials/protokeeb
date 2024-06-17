@@ -54,6 +54,7 @@ Choose one of the following approaches:
 3. Using a spatula or similar tool, spread the solder paste evenly over the surface of the SMT stencil, ensuring every pad of the PCB is covered with solder paste.
 
 </details>
+
 <details>
 <summary>Apply the Solder Paste Manually</summary>
 
@@ -85,13 +86,13 @@ Choose one of the following approaches:
 
 1. If you have a consumer or DIY SMD reflow hot plate, adjust the reflow curve settings according to the melting point and reflow properties of your solder paste. Otherwise, set the desired melting temperature.
 
-[!A-Tech Officials SMD Reflow Plate](Images/Assembly/Protokeeb_AS_3.jpg)
+![A-Tech Officials SMD Reflow Plate](Images/Assembly/Protokeeb_AS_3.jpg)
 
 2. Place the Protokeeb PCB on the hot plate. If the hot plate surface area is smaller than the PCB dimensions, add support beneath the PCB areas that are not in contact with the hot plate surface to keep the PCB flat during reflow.
 
-[!A-Tech Officials Protokeeb PCB Reflow](Images/Assembly/Protokeeb_AS_2.jpg)
+![A-Tech Officials Protokeeb PCB Reflow](Images/Assembly/Protokeeb_AS_2.jpg)
 
-<details>
+</details>
 
 ### Step 3: Capacitor Placement
 
@@ -99,11 +100,11 @@ Choose one of the following approaches:
 
 1. Using tweezers, place the required capacitors on the correct pads according to the interactive BOM file. We are using 0603 package SMD capacitors, which can be easily misplaced if not handled correctly.
 
-[!Protokeeb PCB Capacitor Placement](Images/Assembly/Protokeeb_AS_4.jpg)
+![Protokeeb PCB Capacitor Placement](Images/Assembly/Protokeeb_AS_4.jpg)
 
 2. Start the reflow process if using a hot plate, or solder each capacitor one at a time using a hot air SMD rework station.
 
-[!Protokeeb PCB Capacitor Reflow Process](Images/Assembly/Protokeeb_AS_5.jpg)
+![Protokeeb PCB Capacitor Reflow Process](Images/Assembly/Protokeeb_AS_5.jpg)
 
 ### Step 4: Diode Placement (Top Layer)
 
@@ -112,7 +113,7 @@ Choose one of the following approaches:
 1. Using tweezers, place the required 16 diodes on the correct pads according to the interactive BOM file. Ensure the diodes' direction is correct.
    **Note:** Refer to the interactive BOM for proper orientation.
 
-[!Protokeeb PCB Diode Placement](Images/Assembly/Protokeeb_AS_8.jpg)
+![Protokeeb PCB Diode Placement](Images/Assembly/Protokeeb_AS_8.jpg)
 
 2. Begin the reflow process if using a hot plate, or solder each diode individually using a hot air SMD rework station.
 
@@ -120,7 +121,7 @@ Choose one of the following approaches:
 
 1. Using tweezers, place the required resistors on the correct pads according to the interactive BOM file. We are using 0603 package SMD resistors, which can be easily misplaced if not handled correctly.
 
-[!Protokeeb PCB Resistor Placement](Images/Assembly/Protokeeb_AS_12.jpg)
+![Protokeeb PCB Resistor Placement](Images/Assembly/Protokeeb_AS_12.jpg)
 
 2. Begin the reflow process if using a hot plate, or solder each resistor individually using a hot air SMD rework station.
 
@@ -129,17 +130,17 @@ Choose one of the following approaches:
 1. Using tweezers, place the TXB0102DCU Voltage Level Translator IC on the correct pads according to the interactive BOM file. Ensure the IC's first pin is aligned with the PCB footprint's first pin.
    **Note:** Proper alignment is crucial for functionality.
 
-[!Protokeeb Voltage Level Translator IC Placement](Images/Assembly/Protokeeb_AS_13.jpg)
+![Protokeeb Voltage Level Translator IC Placement](Images/Assembly/Protokeeb_AS_13.jpg)
 
 2. Begin the reflow process if using a hot plate, or solder the IC using a hot air SMD rework station.
 
-[!Protokeeb Voltage Level Translator IC Reflow Process](Images/Assembly/Protokeeb_AS_16.jpg)
+![Protokeeb Voltage Level Translator IC Reflow Process](Images/Assembly/Protokeeb_AS_16.jpg)
 
 **Note:** There was a mistake in interpreting the datasheet of the TXB0102DCU Voltage Level Translator IC, which required circuit modifications for the Protokeeb RGB LEDs to work. This error has been rectified in the Protokeeb Rev 1.0 PCB files.
 
 **Problem:** While designing the PCB, the TXB0102DCU IC's OE pin was pulled to ground with a 51K resistor, as suggested in the datasheet's "8.2 Typical Application" section. However, this caused the LEDs not to light up with data signals from the MCU. To fix this, I had to bypass the IC and connect the RGB data track directly to the RGB LEDs. Although not ideal since the MCU operates at 3.3V logic and the RGB LED is powered by 5V, this was a necessary modification.
 
-[!Protokeeb PCB circuit modification](Images/Assembly/Protokeeb_AS_18.jpg)
+![Protokeeb PCB circuit modification](Images/Assembly/Protokeeb_AS_18.jpg)
 
 **PCB Improvements:** The updated PCB includes an option to pull the TXB0102DCU IC's OE pin high or low using a 51K resistor and solder jumper bridges to bypass the TXB0102DCU IC, allowing a direct connection from the RGB LED data pin to the MCU.
 
@@ -148,25 +149,25 @@ Choose one of the following approaches:
 1. Using tweezers, place the USBLC6-2SC6 ESD Protection IC on the correct pads according to the interactive BOM file. Ensure the IC's first pin is aligned with the footprint's first pin on the PCB.
    **Note:** Proper alignment is crucial.
 
-[!Protokeeb PCB ESD Protection IC Placement](Images/Assembly/Protokeeb_AS_19.jpg)
+![Protokeeb PCB ESD Protection IC Placement](Images/Assembly/Protokeeb_AS_19.jpg)
 
 2. Begin the reflow process if using a hot plate, or solder the IC using a hot air SMD rework station.
 
-[!Protokeeb PCB ESD Protection IC Reflow Process](Images/Assembly/Protokeeb_AS_20.jpg)
+![Protokeeb PCB ESD Protection IC Reflow Process](Images/Assembly/Protokeeb_AS_20.jpg)
 
 ### Step 8: RGB LED Placement
 
 1. Using tweezers, place the 16 WS2812B-2020 RGB LEDs on the correct pads according to the interactive BOM file. Ensure each LED's first pin is aligned with the footprint's first pin on the PCB. The small SMD package size makes careful handling essential.
    **Note:** Proper alignment is crucial.
 
-[!Protokeeb PCB RGB LED Size comparison](Images/Assembly/Protokeeb_AS_23.jpg)
+![Protokeeb PCB RGB LED Size comparison](Images/Assembly/Protokeeb_AS_23.jpg)
 
-[!Protokeeb PCB RGB LED Placement](Images/Assembly/Protokeeb_AS_24.jpg)
+![Protokeeb PCB RGB LED Placement](Images/Assembly/Protokeeb_AS_24.jpg)
 
 2. Begin the reflow process if using a hot plate, or solder each LED individually using a hot air SMD rework station.
    **Note:** Avoid high temperatures that can damage the LED lens.
 
-[!Protokeeb PCB RGB LED Reflow Process](Images/Assembly/Protokeeb_AS_26.jpg)
+![Protokeeb PCB RGB LED Reflow Process](Images/Assembly/Protokeeb_AS_26.jpg)
 
 **Note:** The Protokeeb Rev 1.0 PCB allows for two separate RGB data signals from the MCU: Rows 1 and 2 share "DATA-IN-1," and Rows 3 and 4 share "DATA-IN-2." This enables different RGB animations/colors for each group. To use a single data signal for all rows, bridge solder jumper "JP1."
 
@@ -174,11 +175,11 @@ Choose one of the following approaches:
 
 1. Using tweezers, place the two SMD push buttons on their respective pads according to the interactive BOM file. Ensure proper alignment.
 
-[!Protokeeb PCB Push Button Placement](Images/Assembly/Protokeeb_AS_27.jpg)
+![Protokeeb PCB Push Button Placement](Images/Assembly/Protokeeb_AS_27.jpg)
 
 2. Begin the reflow process if using a hot plate, or solder each push button using a hot air SMD rework station.
 
-[!Protokeeb PCB Push Button Reflow Process](Images/Assembly/Protokeeb_AS_28.jpg)
+![Protokeeb PCB Push Button Reflow Process](Images/Assembly/Protokeeb_AS_28.jpg)
 
 ### Step 10: Testing RGB LEDs
 
@@ -191,7 +192,7 @@ Before soldering the Raspberry Pi Pico development board onto the Protokeeb PCB,
    | TP2 | GND |
    | TP3 | Data-in-1 |
 
-[!Protokeeb PCB Jumper Wire Soldering Process](Images/Assembly/Protokeeb_AS_29.jpg)
+![Protokeeb PCB Jumper Wire Soldering Process](Images/Assembly/Protokeeb_AS_29.jpg)
 
 2. Prepare a second Raspberry Pi Pico or any other RP2040 development board and upload the CircuitPython firmware onto it. You can get the CircuitPython firmware .uf2 file [here](https://circuitpython.org/board/raspberry_pi_pico/)
 
@@ -237,7 +238,7 @@ while True:
 
 7. Run the CircuitPython code and check if all the RGB LEDs are working properly.
 
-[!Protokeeb PCB RGB LED Testing](Images/Assembly/Protokeeb_AS_30.jpg)
+![Protokeeb PCB RGB LED Testing](Images/Assembly/Protokeeb_AS_30.jpg)
 
 ### Step 11: Resistor Placement (Bottom Layer)
 
@@ -246,7 +247,7 @@ while True:
 2. Use a hot air rework station or a fine-tip soldering iron to solder the resistors one at a time.
    **Note:** You cannot use the SMD Reflow Hot Plate because the top layer of the PCB is populated with electronic components.
 
-[!Protokeeb PCB Resistor Placement](Images/Assembly/Protokeeb_AS_33.jpg)
+![Protokeeb PCB Resistor Placement](Images/Assembly/Protokeeb_AS_33.jpg)
 
 ### Step 12: USB Connector Placement
 
@@ -254,7 +255,7 @@ while True:
 
 2. Use a hot air rework station or a fine-tip soldering iron to solder the USB connector securely.
 
-[!Protokeeb PCB USB Connector Placement](Images/Assembly/Protokeeb_AS_31.jpg)
+![Protokeeb PCB USB Connector Placement](Images/Assembly/Protokeeb_AS_31.jpg)
 
 ### Step 13: Diode Placement (Bottom Layer)
 
@@ -263,7 +264,7 @@ while True:
 
 2. Use a hot air rework station or a fine-tip soldering iron to solder the diode securely.
 
-[!Protokeeb PCB USB Connector Placement](Images/Assembly/Protokeeb_AS_32.jpg)
+![Protokeeb PCB USB Connector Placement](Images/Assembly/Protokeeb_AS_32.jpg)
 
 ### Step 14: RP2040 Development Board Placement
 
@@ -273,26 +274,26 @@ while True:
 
 3. Align the RP2040 development board on its respective pad/footprint using tweezers.
 
-[!Protokeeb PCB Raspberry Pi Pico Soldering Process](Images/Assembly/Protokeeb_AS_34.jpg)
+![Protokeeb PCB Raspberry Pi Pico Soldering Process](Images/Assembly/Protokeeb_AS_34.jpg)
 
 4. Use a hot air rework station to solder it in place.
    **Note:** It is recommended to hover the hot air station handle on the entire RP2040 development board area in a circular motion to ensure the pads underneath solder properly with the PCB pads.
 
-[!Protokeeb PCB Raspberry Pi Pico Placement](Images/Assembly/Protokeeb_AS_35.jpg)
+![Protokeeb PCB Raspberry Pi Pico Placement](Images/Assembly/Protokeeb_AS_35.jpg)
 
 ### Step 15: Rotary Encoder Placement
 
 1. Take a rotary encoder with a built-in push button (as specified in the BOM) and place it in its respective location.
 
-[!Rotary Encoder](Images/Assembly/Protokeeb_AS_36.jpg)
+![Rotary Encoder](Images/Assembly/Protokeeb_AS_36.jpg)
 
 2. Apply some flux, and use a soldering iron to solder the rotary encoder in place.
 
-[!Protokeeb PCB Rotary Encoder Placement](Images/Assembly/Protokeeb_AS_37.jpg)
+![Protokeeb PCB Rotary Encoder Placement](Images/Assembly/Protokeeb_AS_37.jpg)
 
 Congratulations! You have just completed the soldering part of the assembly process. We are almost done.
 
-[!Fully Assembled Protokeeb PCB](Images/Assembly/Protokeeb_AS_48.jpg)
+![Fully Assembled Protokeeb PCB](Images/Assembly/Protokeeb_AS_48.jpg)
 
 ### Step 16: Flash the Firmware
 
@@ -346,28 +347,28 @@ You can customize colors for a unique look.
 
 **Note:** You may find Protokeeb sandwich case images shown in this guide to be slightly different from the released CAD files because at the time of designing the sandwich case for the Protokeeb PCB I had done some mistakes. These mistakes has been rectified in the Protokeeb rev1.0 sandwich case CAD files.
 
-[!Protokeeb Sandwich/Layered Case](Images/Sandwich_Case/Protokeeb_SC_1.jpg)
+![Protokeeb Sandwich/Layered Case](Images/Sandwich_Case/Protokeeb_SC_1.jpg)
 
 1. Prepare the case:
 
    - Remove protective material/paper from acrylic parts.
 
-[!Protokeeb Sandwich/Layered Case](Images/Assembly/Protokeeb_AS_40.jpg)
+![Protokeeb Sandwich/Layered Case](Images/Assembly/Protokeeb_AS_40.jpg)
 
 2. Gather hardware:
 
    - x6 20mm long Allen/hex socket head M3 bolts
    - x6 M3 Nuts
 
-[!M3 Nuts and Bolts](Images/Assembly/Protokeeb_AS_49.jpg)
+![M3 Nuts and Bolts](Images/Assembly/Protokeeb_AS_49.jpg)
 
-[!Allen Socket M3 Bolt](Images/Assembly/Protokeeb_AS_50.jpg)
+![Allen Socket M3 Bolt](Images/Assembly/Protokeeb_AS_50.jpg)
 
 3. Install switches:
 
    - Place 16 Cherry MX style/profile mechanical switches on the switch plate layer.
 
-[!Protokeeb Switch Plate Mechanical Switch Installation](Images/Assembly/Protokeeb_AS_52.jpg)
+![Protokeeb Switch Plate Mechanical Switch Installation](Images/Assembly/Protokeeb_AS_52.jpg)
 
 4. Solder PCB:
 
@@ -390,7 +391,7 @@ You can customize colors for a unique look.
 
    - Insert x6 M3 Bolts and tighten with an Allen key or hex screwdriver.
 
-[!Protokeeb with Sandwich Case](Images/Assembly/Protokeeb_AS_44.jpg)
+![Protokeeb with Sandwich Case](Images/Assembly/Protokeeb_AS_44.jpg)
 
 </details>
 
@@ -405,7 +406,7 @@ Work-in-progress...
 
 Place rubber feet on the bottom side of the case to prevent the Protokeeb from slipping on the table surface.
 
-[!3M Rubber Feet](Images/Assembly/Protokeeb_AS_51.jpg)
+![3M Rubber Feet](Images/Assembly/Protokeeb_AS_51.jpg)
 
 ### Step 19: Final Testing (Optional)
 
@@ -419,7 +420,7 @@ Place rubber feet on the bottom side of the case to prevent the Protokeeb from s
 
 Congratulations! Your Protokeeb is now assembled and ready to use. Enjoy your custom keyboard!
 
-[!Protokeeb Keyboard](Images/KB_Images/Protokeeb_2.jpg)
+![Protokeeb Keyboard](Images/KB_Images/Protokeeb_2.jpg)
 
 For any issues or questions during assembly, please open an issue on GitHub.
 

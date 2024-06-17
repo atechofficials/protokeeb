@@ -41,8 +41,9 @@
 
 ### Step 1: Prepare the PCB for soldering
 
-Choose one of the following approaches:
 **Note:** I have not ordered the SMT stencil from the PCB fabrication house, so there are no images for the SMT stencil solder paste application process.
+
+Choose one of the following approaches:
 
 <details open>
 <summary>Apply the Solder Paste Using the SMT Stencil</summary>
@@ -61,6 +62,7 @@ Choose one of the following approaches:
 1. Use solder paste that comes in a syringe if possible, rather than in a small cylindrical container.
 
 2. Select a small diameter blunt syringe needle (normally included with syringe-type solder paste).
+
    **Note:** Ensure the needle's diameter is not too small, or it will hinder the proper flow of solder paste.
 
 3. Unlike the SMT stencil method, apply the solder paste only to the pads you are working on, such as capacitors, resistors, etc.
@@ -75,6 +77,7 @@ Choose one of the following approaches:
 <summary>Hot Air Rework Station</summary>
 
 1. Set the temperature of your SMD rework station according to the melting point of the solder paste.
+
    **Note:** Normally, a temperature of 250°C with 15 air works fine for most low melting solder pastes.
 
 2. Secure the PCB on a PCB holder or using a third hand tool for easier soldering.
@@ -111,6 +114,7 @@ Choose one of the following approaches:
 **Note:** Open the included interactive BOM file on your laptop/desktop/tablet during soldering to easily track components and placement.
 
 1. Using tweezers, place the required 16 diodes on the correct pads according to the interactive BOM file. Ensure the diodes' direction is correct.
+
    **Note:** Refer to the interactive BOM for proper orientation.
 
 ![Protokeeb PCB Diode Placement](Images/Assembly/Protokeeb_AS_8.jpg)
@@ -128,6 +132,7 @@ Choose one of the following approaches:
 ### Step 6: Voltage Level Translator IC Placement
 
 1. Using tweezers, place the TXB0102DCU Voltage Level Translator IC on the correct pads according to the interactive BOM file. Ensure the IC's first pin is aligned with the PCB footprint's first pin.
+
    **Note:** Proper alignment is crucial for functionality.
 
 ![Protokeeb Voltage Level Translator IC Placement](Images/Assembly/Protokeeb_AS_13.jpg)
@@ -136,7 +141,8 @@ Choose one of the following approaches:
 
 ![Protokeeb Voltage Level Translator IC Reflow Process](Images/Assembly/Protokeeb_AS_16.jpg)
 
-**Note:** There was a mistake in interpreting the datasheet of the TXB0102DCU Voltage Level Translator IC, which required circuit modifications for the Protokeeb RGB LEDs to work. This error has been rectified in the Protokeeb Rev 1.0 PCB files.
+> [!Note]
+> There was a mistake in interpreting the datasheet of the TXB0102DCU Voltage Level Translator IC, which required circuit modifications for the Protokeeb RGB LEDs to work. This error has been rectified in the Protokeeb Rev 1.0 PCB files.
 
 **Problem:** While designing the PCB, the TXB0102DCU IC's OE pin was pulled to ground with a 51K resistor, as suggested in the datasheet's "8.2 Typical Application" section. However, this caused the LEDs not to light up with data signals from the MCU. To fix this, I had to bypass the IC and connect the RGB data track directly to the RGB LEDs. Although not ideal since the MCU operates at 3.3V logic and the RGB LED is powered by 5V, this was a necessary modification.
 
@@ -147,6 +153,7 @@ Choose one of the following approaches:
 ### Step 7: ESD Protection IC Placement
 
 1. Using tweezers, place the USBLC6-2SC6 ESD Protection IC on the correct pads according to the interactive BOM file. Ensure the IC's first pin is aligned with the footprint's first pin on the PCB.
+
    **Note:** Proper alignment is crucial.
 
 ![Protokeeb PCB ESD Protection IC Placement](Images/Assembly/Protokeeb_AS_19.jpg)
@@ -158,6 +165,7 @@ Choose one of the following approaches:
 ### Step 8: RGB LED Placement
 
 1. Using tweezers, place the 16 WS2812B-2020 RGB LEDs on the correct pads according to the interactive BOM file. Ensure each LED's first pin is aligned with the footprint's first pin on the PCB. The small SMD package size makes careful handling essential.
+
    **Note:** Proper alignment is crucial.
 
 ![Protokeeb PCB RGB LED Size comparison](Images/Assembly/Protokeeb_AS_23.jpg)
@@ -165,11 +173,13 @@ Choose one of the following approaches:
 ![Protokeeb PCB RGB LED Placement](Images/Assembly/Protokeeb_AS_24.jpg)
 
 2. Begin the reflow process if using a hot plate, or solder each LED individually using a hot air SMD rework station.
+
    **Note:** Avoid high temperatures that can damage the LED lens.
 
 ![Protokeeb PCB RGB LED Reflow Process](Images/Assembly/Protokeeb_AS_26.jpg)
 
-**Note:** The Protokeeb Rev 1.0 PCB allows for two separate RGB data signals from the MCU: Rows 1 and 2 share "DATA-IN-1," and Rows 3 and 4 share "DATA-IN-2." This enables different RGB animations/colors for each group. To use a single data signal for all rows, bridge solder jumper "JP1."
+> [!Note]
+> The Protokeeb Rev 1.0 PCB allows for two separate RGB data signals from the MCU: Rows 1 and 2 share "DATA-IN-1," and Rows 3 and 4 share "DATA-IN-2." This enables different RGB animations/colors for each group. To use a single data signal for all rows, bridge solder jumper "JP1."
 
 ### Step 9: Push Button Placement
 
@@ -186,11 +196,12 @@ Choose one of the following approaches:
 Before soldering the Raspberry Pi Pico development board onto the Protokeeb PCB, let's test the RGB LEDs.
 
 1. Solder jumper wires to the following test pads:
-   | Silkscreen Reference | Function |
-   |:----------:|:----------:|
-   | TP1 | 5V |
-   | TP2 | GND |
-   | TP3 | Data-in-1 |
+
+   | Silkscreen Reference | Function  |
+   | :------------------: | :-------: |
+   |         TP1          |    5V     |
+   |         TP2          |    GND    |
+   |         TP3          | Data-in-1 |
 
 ![Protokeeb PCB Jumper Wire Soldering Process](Images/Assembly/Protokeeb_AS_29.jpg)
 
@@ -199,11 +210,12 @@ Before soldering the Raspberry Pi Pico development board onto the Protokeeb PCB,
 3. Download the required CircuitPython libraries from [here](https://circuitpython.org/libraries) For our testing purposes, we only need the "neopixel" and the "adafruit_led_animation" libraries.
 
 4. Connect the Jumper wires to the RP2040 development board according to the table below:
+
    | Jumper Wire | RP2040 Dev board |
-   |:----------:|:----------:|
-   | TP1/5V | 5V |
-   | TP2/GND | GND |
-   | TP3/Data | GPIO10 |
+   | :---------: | :--------------: |
+   |   TP1/5V    |        5V        |
+   |   TP2/GND   |       GND        |
+   |  TP3/Data   |      GPIO10      |
 
    **Note:** (Optional) Connect a 100-ohm resistor between the data pin of the RGB LED and the RP2040 pin (GPIO10).
 
@@ -245,6 +257,7 @@ while True:
 1. Grab the required resistors and place them on the correct pads according to the Interactive BOM file. Use tweezers to handle the 0603 package SMD resistors, as they can be easily misplaced.
 
 2. Use a hot air rework station or a fine-tip soldering iron to solder the resistors one at a time.
+
    **Note:** You cannot use the SMD Reflow Hot Plate because the top layer of the PCB is populated with electronic components.
 
 ![Protokeeb PCB Resistor Placement](Images/Assembly/Protokeeb_AS_33.jpg)
@@ -260,6 +273,7 @@ while True:
 ### Step 13: Diode Placement (Bottom Layer)
 
 1. Grab a Schottky barrier diode (according to the BOM) and, using tweezers, place it on its respective pad according to the Interactive BOM file.
+
    **Note:** Ensure the diode direction is correct as per the Interactive BOM file.
 
 2. Use a hot air rework station or a fine-tip soldering iron to solder the diode securely.
@@ -277,6 +291,7 @@ while True:
 ![Protokeeb PCB Raspberry Pi Pico Soldering Process](Images/Assembly/Protokeeb_AS_34.jpg)
 
 4. Use a hot air rework station to solder it in place.
+
    **Note:** It is recommended to hover the hot air station handle on the entire RP2040 development board area in a circular motion to ensure the pads underneath solder properly with the PCB pads.
 
 ![Protokeeb PCB Raspberry Pi Pico Placement](Images/Assembly/Protokeeb_AS_35.jpg)
@@ -301,7 +316,7 @@ Congratulations! You have just completed the soldering part of the assembly proc
 
 2. Follow the QMK/KMK firmware flashing instructions to upload the firmware.
 
-**QMK:** The QMK firmware file is included in this GitHub repo at "Firmware>QMK>protokeeb_rev1_default.uf2". Put the Protokeeb into bootloader mode and simply copy and paste the file into the Protokeeb flash memory. This firmware file consists of the default keymap; if you need anything specific, please refer [here](https://docs.qmk.fm/#/newbs_building_firmware) for further development.
+**QMK:** The QMK firmware file is included in this GitHub repo at "Firmware > QMK > protokeeb_rev1_default.uf2". Put the Protokeeb into bootloader mode and simply copy and paste the file into the Protokeeb's flash memory. This firmware file consists of the default keymap; if you need anything specific, please refer [here](https://docs.qmk.fm/#/newbs_building_firmware) for further development.
 
 ### Step 17: Initial Testing (Optional)
 
@@ -313,11 +328,11 @@ Congratulations! You have just completed the soldering part of the assembly proc
 
 4. Check these essential test pads for the correct voltages:
 
-| Silkscreen Reference | Function |
-| :------------------: | :------: |
-|         TP1          |    5V    |
-|         TP2          |   GND    |
-|       TP7/TP11       |   3.3V   |
+   | Silkscreen Reference | Function |
+   | :------------------: | :------: |
+   |         TP1          |    5V    |
+   |         TP2          |   GND    |
+   |       TP7/TP11       |   3.3V   |
 
 ### Step 17: Assemble the Case
 
@@ -325,6 +340,7 @@ Congratulations! You have just completed the soldering part of the assembly proc
 <summary>Sandwich/Layered Case</summary>
 
 A sandwich/layered case is created in layers, with each layer adding thickness/dimension to the case. Common materials include acrylic (affordable and easy to laser cut), ABS, and polycarbonate. Metals like aluminum or stainless steel can be used but are more expensive.
+
 **Note:** If you decided to use metal for your sandwich/layered case it is recommended to use a slightly flexible material for the switch plate layer and keep the switch plate layer thickness to not more than 2mm.
 
 You can order the laser cutting parts for this case according to the table below:
@@ -345,7 +361,8 @@ Total case thickness: 20mm.
 
 You can customize colors for a unique look.
 
-**Note:** You may find Protokeeb sandwich case images shown in this guide to be slightly different from the released CAD files because at the time of designing the sandwich case for the Protokeeb PCB I had done some mistakes. These mistakes has been rectified in the Protokeeb rev1.0 sandwich case CAD files.
+> [!Note]
+> You may find Protokeeb sandwich case images shown in this guide to be slightly different from the released CAD files because at the time of designing the sandwich case for the Protokeeb PCB I had done some mistakes. These mistakes has been rectified in the Protokeeb rev1.0 sandwich case CAD files.
 
 ![Protokeeb Sandwich/Layered Case](Images/Sandwich_Case/Protokeeb_SC_1.jpg)
 

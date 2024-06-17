@@ -6,29 +6,25 @@
 
 # Protokeeb
 
-![Protokeeb](https://i.imgur.com/RsSBoJg.jpg)
+![Protokeeb](Images/Assembly/Protokeeb_AS_41.jpg)
 
 ### Overview
 
-A 16-key (4 x 4) Keyboard/Numpad/Macropad/MIDI device designed by A-Tech Officials for easily getting started in the field of custom keyboards and open-source keyboard firmware.
-
-Learn, build, and modify easily as the Protokeeb is an open-source hardware project.
-The PCB is based on a Raspberry Pi Pico development board.
-Designed for developers and enthusiasts who want to begin their journey in the world of custom keyboards and keyboard firmware.
+Protokeeb is a 16-key (4 x 4) keyboard/numpad/macropad/MIDI device designed by A-Tech Officials. It is ideal for those looking to get started with custom keyboards and open-source keyboard firmware. The PCB is based on a Raspberry Pi Pico development board, making it perfect for developers and enthusiasts eager to explore the world of custom keyboards and firmware.
 
 ## Features
 
 - Per-key south-facing ARGB (WS2812B-2020) backlight LED.
 - All anti-ghosting keys. It's a Mechanical Keyboard. Duh.
 - N-Key Rollover
-- ESD/EMI Protection on-board
+- On-board ESD/EMI protection.
 - Rotary Encoder with push button.
 - USB Type-C port. Not a feature anymore in 2024. #NoMoreMicroUSB
 - Dedicated Bootselect and Reset Button for easy bootloader access.
-- Supports different RP2040-based development boards that have similar SMD footprint and pinout to a Raspberry Pi Pico.
-- 2MB/4MB Flash storage for all those feature-packed keyboard firmware.
-- Protokeeb hardware supports QMK, KMK, and ZMK keyboard firmware.
-- Support for both a Sandwich Style/Layered Case or a 3D printed Case.
+- Supports various RP2040-based development boards that have similar SMD footprint and pinout to a Raspberry Pi Pico.
+- 2MB/4MB flash storage for comprehensive keyboard firmware.
+- Compatible with QMK, KMK, and ZMK keyboard firmware.
+- Support both sandwich style/layered case or 3D-printed cases.
 
 ## Supported Dev Boards
 
@@ -36,18 +32,34 @@ Designed for developers and enthusiasts who want to begin their journey in the w
 - Raspberry Pi Pico W
 - Waveshare RP2040-Plus
 
-# Getting Started
+## Getting Started
 
-There are two options to get started with Protokeeb hardware:
+You can get started with Protokeeb hardware in two ways:
 
-- Option-1 either order the fully assembled/soldered PCB from [atechofficials](https://atechofficials.com/protokeeb.) (Work-in-progress)
-- Option-2 or download the Gerber files and all the necessary files to order the PCB from your local/preferred PCB fabrication house/company and source all the required electronics components at per your convenience.
+- **Option 1**: Order a fully assembled/soldered PCB from [A-Tech Officials](https://atechofficials.com/protokeeb) (Work-in-progress).
+- **Option 2**: Download the Gerber and necessary files to order the PCB from your local or preferred PCB fabrication company and source all required electronic components yourself.
 
-**Option-1** will be a straightforward plug and play option because each Protokeeb board comes flashed with QMK firmware and the default keymap. So, you can easily tinker around and customize without worrying too much about the electronics.
+**Option 1** is a straightforward plug-and-play option, as each Protokeeb board comes pre-flashed with QMK firmware and a default keymap, allowing easy customization without worrying about the electronics.
 
-**Option-2** will be a DIY approach with detailed instructions for almost every step. So, that you can quickly start your custom keyboard journey filled with learning, development, and customization.
+**Option 2** is a DIY approach with detailed instructions provided for almost every step, ideal for those who want to immerse themselves in the learning, development, and customization aspects of custom keyboards.
 
 > [!Note]
-> Option-2 is not recommended for a person who is an absolute beginner in the field of electronics as this option requires a certain set of skills and basic electronics knowledge, not to mention good SMD soldering skills.
+> Option 2 is not recommended for absolute beginners in electronics, as it requires specific skills and basic electronics knowledge, including proficient SMD soldering skills.
 
-Follow this guide if you are ready to test your skills: [Assembly Instructions](https://github.com/atechofficials/protokeeb) (Work-in-progress)
+For detailed assembly instructions, follow this guide: [Assembly Instructions](assembly_instructions.md)
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contributing
+
+Contributions are welcome! Please fork this repository and submit a pull request with your changes.
+
+## Support
+
+For any issues or questions, please open an issue on GitHub.
+
+## Acknowledgements
+
+Thanks to the open-source community for their support and contributions.

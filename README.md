@@ -43,7 +43,7 @@ You can get started with Protokeeb hardware in two ways:
 
 **Option 2** is a DIY approach with detailed instructions provided for almost every step, ideal for those who want to immerse themselves in the learning, development, and customization aspects of custom keyboards.
 
-> [!Note]
+> [!NOTE]
 > Option 2 is not recommended for absolute beginners in electronics, as it requires specific skills and basic electronics knowledge, including proficient SMD soldering skills.
 
 For detailed assembly instructions, follow this guide: [Assembly Instructions](assembly_instructions.md)

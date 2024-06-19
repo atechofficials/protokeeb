@@ -148,7 +148,9 @@ Choose one of the following approaches:
 
 ![Protokeeb PCB circuit modification](Images/Assembly/Protokeeb_AS_18.jpg)
 
-**PCB Improvements:** The updated PCB includes an option to pull the TXB0102DCU IC's OE pin high or low using a 51K resistor and solder jumper bridges to bypass the TXB0102DCU IC, allowing a direct connection from the RGB LED data pin to the MCU.
+**PCB Improvements:** The updated PCB includes an option to pull the TXB0102DCU IC's OE pin high or low using a 51K resistor and solder jumper bridges JP2 and JP3 to bypass the TXB0102DCU IC, allowing a direct connection from the RGB LED data pin to the MCU.
+
+![Protokeeb PCB Solder Bridge Jumpers](Images/PCB_Renders/AT-ProtoKeeb_rev1_5.png)
 
 ### Step 7: ESD Protection IC Placement
 
@@ -180,6 +182,8 @@ Choose one of the following approaches:
 
 > [!NOTE]
 > The Protokeeb Rev 1.0 PCB allows for two separate RGB data signals from the MCU: Rows 1 and 2 share "DATA-IN-1," and Rows 3 and 4 share "DATA-IN-2." This enables different RGB animations/colors for each group. To use a single data signal for all rows, bridge solder jumper "JP1."
+
+![Protokeeb PCB Solder Bridge Jumpers](Images/PCB_Renders/AT-ProtoKeeb_rev1_5.png)
 
 ### Step 9: Push Button Placement
 

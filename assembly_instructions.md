@@ -141,7 +141,6 @@ Choose one of the following approaches:
 
 ![Protokeeb Voltage Level Translator IC Reflow Process](Images/Assembly/Protokeeb_AS_16.jpg)
 
-> [!NOTE]
 > There was a mistake in interpreting the datasheet of the TXB0102DCU Voltage Level Translator IC, which required circuit modifications for the Protokeeb RGB LEDs to work. This error has been rectified in the Protokeeb Rev 1.0 PCB files.
 
 **Problem:** While designing the PCB, the TXB0102DCU IC's OE pin was pulled to ground with a 51K resistor, as suggested in the datasheet's "8.2 Typical Application" section. However, this caused the LEDs not to light up with data signals from the MCU. To fix this, I had to bypass the IC and connect the RGB data track directly to the RGB LEDs. Although not ideal since the MCU operates at 3.3V logic and the RGB LED is powered by 5V, this was a necessary modification.
@@ -180,7 +179,6 @@ Choose one of the following approaches:
 
 ![Protokeeb PCB RGB LED Reflow Process](Images/Assembly/Protokeeb_AS_26.jpg)
 
-> [!NOTE]
 > The Protokeeb Rev 1.0 PCB allows for two separate RGB data signals from the MCU: Rows 1 and 2 share "DATA-IN-1," and Rows 3 and 4 share "DATA-IN-2." This enables different RGB animations/colors for each group. To use a single data signal for all rows, bridge solder jumper "JP1."
 
 ![Protokeeb PCB Solder Bridge Jumpers](Images/PCB_Renders/AT-ProtoKeeb_rev1_5.png)
@@ -365,7 +363,6 @@ Total case thickness: 20mm.
 
 You can customize colors for a unique look.
 
-> [!NOTE]
 > You may find Protokeeb sandwich case images shown in this guide to be slightly different from the released CAD files because at the time of designing the sandwich case for the Protokeeb PCB I had done some mistakes. These mistakes has been rectified in the Protokeeb rev1.0 sandwich case CAD files.
 
 ![Protokeeb Sandwich/Layered Case](Images/Sandwich_Case/Protokeeb_SC_1.jpg)

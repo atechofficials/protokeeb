@@ -6,7 +6,7 @@
 
 # Protokeeb
 
-![Protokeeb](Images/Assembly/Protokeeb_AS_41.jpg)
+![Protokeeb Keyboard with 3D Printed Case](Images/KB_Images/Protokeeb_3D-13.jpg)
 
 ### Overview
 

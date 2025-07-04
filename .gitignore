@@ -1,14 +1,16 @@
-# Ignore Protkeeb Logo Folder/Files
+# Ignore Protokeeb Logo Folder/Files
 Logo/
 
-# Ignore Protkeeb Rev1 Electronics Components List
+# Ignore Protokeeb Rev1 Electronics Components List
 # Note: Seprate BOM files are included in the repo
 PCB/Rev1.0/AT-ProtoKeeb_rev1/ProtoKeeb_Parts.txt
 
-# Ignore Protekeeb Rev1.1 Files (Work in progress)
+# Ignore Protokeeb Rev1.1 Files (Work in progress)
 PCB/Rev1.1/
 
-# Ignore Protkeeb Parts BOM Excel Sheet
+# Ignore Protokeeb Parts BOM Excel Sheet
 # Note: Seprate BOM files are included in the repo
 PCB/AT_Protokeeb_BOM.xlsx
 
+# Ignore Protokeeb 3D Printed Case v1 variant
+Case/3D_Printed_Case/rev1/Protokeeb_v1_Case2.stl

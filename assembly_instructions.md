@@ -14,8 +14,8 @@
 ## 2. [Assembly Steps](#assembly-steps)
 
 - [2.1 Step 1: Prepare the PCB for Soldering](#step-1-prepare-the-pcb-for-soldering)
-  - [Apply the Solder Paste Using the SMT Stencil](#apply-the-solder-paste-using-the-smt-stencil)
-  - [Apply the Solder Paste Manually](#apply-the-solder-paste-manually)
+  - [Apply the Solder Paste Using the SMT Stencil](#solder-paste-application-smt-stencil)
+  - [Apply the Solder Paste Manually](#solder-paste-application-manually)
 - [2.2 Step 2: Prepare the SMD Soldering Equipment](#step-2-prepare-the-smd-soldering-equipment)
   - [Hot Air Rework Station](#hot-air-rework-station)
   - [SMD Reflow Hot Plate](#smd-reflow-hot-plate)
@@ -81,7 +81,9 @@
 Choose one of the following approaches:
 
 <details open>
-<summary><a name="Apply the Solder Paste Using the SMT Stencil"></a></summary>
+<summary>Apply the Solder Paste Using the SMT Stencil</summary>
+
+#### Solder Paste Application (SMT Stencil):
 
 1. Align the Protokeeb SMT stencil properly with the Protokeeb PCB.
 
@@ -93,6 +95,8 @@ Choose one of the following approaches:
 
 <details>
 <summary>Apply the Solder Paste Manually</summary>
+
+#### Solder Paste Application (Manually):
 
 1. Use solder paste that comes in a syringe if possible, rather than in a small cylindrical container.
 
@@ -374,7 +378,7 @@ Congratulations! You have just completed the soldering part of the assembly proc
 ### Step 18: Assemble the Case
 
 <details>
-<summary><a name="Sandwich Case"></a></summary>
+<summary>Sandwich Case</summary>
 
 A sandwich/layered case is created in layers, with each layer adding thickness/dimension to the case. Common materials include acrylic (affordable and easy to laser cut), ABS, and polycarbonate. Metals like aluminum or stainless steel can be used but are more expensive.
 
@@ -530,6 +534,10 @@ Recommended 3D printing settings and materials:
    Option-1 (recommended):
 
    - Use a specialized soldering iron attachment/soldering tip that is designed for threaded brass inserts placement. With that attachment insert the threaded brass insert into its respective hole on the bottom enclosure.
+
+   ![Soldering Iron with Threaded Brass Inserts Tip](Images/3D_Printed_Case/Assembly/Threaded_Brass_Inserts_Soldering_Tip_2.jpg)
+
+   ![Threaded Brass Inserts Mounting Kit](Images/3D_Printed_Case/Assembly/Threaded_Brass_Inserts_Soldering_Tip_3.jpg)
 
    Option-2
 
